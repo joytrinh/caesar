@@ -1,0 +1,7 @@
+E:\STUDY\IT\Self-Study\C#\CS50\caesar\caesar\bin\Debug\caesar.exe.config
+E:\STUDY\IT\Self-Study\C#\CS50\caesar\caesar\bin\Debug\caesar.exe
+E:\STUDY\IT\Self-Study\C#\CS50\caesar\caesar\bin\Debug\caesar.pdb
+E:\STUDY\IT\Self-Study\C#\CS50\caesar\caesar\obj\Debug\caesar.csprojAssemblyReference.cache
+E:\STUDY\IT\Self-Study\C#\CS50\caesar\caesar\obj\Debug\caesar.csproj.CoreCompileInputs.cache
+E:\STUDY\IT\Self-Study\C#\CS50\caesar\caesar\obj\Debug\caesar.exe
+E:\STUDY\IT\Self-Study\C#\CS50\caesar\caesar\obj\Debug\caesar.pdb
