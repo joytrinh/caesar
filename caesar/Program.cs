@@ -10,10 +10,61 @@ namespace caesar
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Input the text: ");
+            string text = Console.ReadLine();
             Console.WriteLine("Input the key: ");
-            int key = int.Parse(Console.ReadLine());
+            string keyString = Console.ReadLine();
+            int key;
+            //Check key
+            bool success = int.TryParse(keyString, out key);
+            if (success)
+            {
+                //Shift letters only
 
+                int n = text.Length;
+                //Change from text to ASCII values
+                //var asciiValue = Encoding.ASCII.GetBytes(text);
 
+                int[] newText = new int[n];
+                char[] arr = new char[n];
+                for (int i = 0; i < n; i++)
+                {
+                    var a = text[i];
+                    //var b = asciiValue[i];
+
+                    var c = newText[i];
+                    if (char.IsLetter(a))
+                    {
+                        var b = (int)a;
+                        if (char.IsUpper(a))
+                        {
+                            if (b <= (90 - key))
+                                c = b + key;
+                            else
+                                c = b + key - 26;
+                        }
+                        if (char.IsLower(a))
+                        {
+                            if (b <= (122 - key))
+                                c = b + key;
+                            else
+                                c = b + key - 26;
+                        }
+                    }
+                    else
+                        c = (int)a;
+                }
+                //Convert form ASCII to char
+                for (int i = 0; i < n; i++)
+                {
+                    arr[i] = (char)newText[i];
+                    Console.WriteLine(arr[i]);
+                }
+                Console.ReadLine();
+            }                
+            else
+                Console.WriteLine("Please input a valid key. A key must be a number.");
+            
         }
     }
 }
