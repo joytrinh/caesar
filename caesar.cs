@@ -10,10 +10,12 @@ namespace caesar
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Input the text: ");
-            string text = Console.ReadLine();
-            Console.WriteLine("Input the key: ");
-            string keyString = Console.ReadLine();
+            string text = "";
+            for (int i = 0; i < args.Length-1; i++)
+            {
+                text += args[i] + " ";
+            }
+            string keyString = args[args.Length - 1];
             int key;
 
             //Check key
