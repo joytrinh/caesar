@@ -31,28 +31,27 @@ namespace caesar
                 {
                     var a = text[i];
                     //var b = asciiValue[i];
-
-                    var c = newText[i];
+                                        
                     if (char.IsLetter(a))
                     {
                         var b = (int)a;
                         if (char.IsUpper(a))
                         {
                             if (b <= (90 - key))
-                                c = b + key;
+                                newText[i] = b + key;
                             else
-                                c = b + key - 26;
+                                newText[i] = b + key - 26;
                         }
                         if (char.IsLower(a))
                         {
                             if (b <= (122 - key))
-                                c = b + key;
+                                newText[i] = b + key;
                             else
-                                c = b + key - 26;
+                                newText[i] = b + key - 26;
                         }
                     }
                     else
-                        c = (int)a;
+                        newText[i] = (int)a;
                 }
                 //Convert form ASCII to char
                 for (int i = 0; i < n; i++)
