@@ -15,23 +15,19 @@ namespace caesar
             Console.WriteLine("Input the key: ");
             string keyString = Console.ReadLine();
             int key;
+
             //Check key
             bool success = int.TryParse(keyString, out key);
             if (success)
             {
-                //Shift letters only
-
-                int n = text.Length;
-                //Change from text to ASCII values
-                //var asciiValue = Encoding.ASCII.GetBytes(text);
-
+                int n = text.Length;                
                 int[] newText = new int[n];
                 char[] arr = new char[n];
+                
+                //Convert from text to ASCII value:
                 for (int i = 0; i < n; i++)
                 {
                     var a = text[i];
-                    //var b = asciiValue[i];
-                                        
                     if (char.IsLetter(a))
                     {
                         var b = (int)a;
@@ -57,7 +53,7 @@ namespace caesar
                 for (int i = 0; i < n; i++)
                 {
                     arr[i] = (char)newText[i];
-                    Console.WriteLine(arr[i]);
+                    Console.Write(arr[i]);
                 }
                 Console.ReadLine();
             }                
